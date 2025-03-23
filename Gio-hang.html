@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/main-style.css">
+  <link rel="shortcut icon" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Giỏ Hàng</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .cart, .products {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .product {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    .product button {
+      background: #ff00ff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .product button:hover {
+      background: #ff00ff;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="top-bar">
+    <p>📞 0123456789 | ✉️ contact@email.com | 100 Trần Phú, Q.1, TP.HCM
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-youtube"></a></p>
+  </div>
+  <nav class="navbar">
+    <div class="logo"><img src="images/logo-navbar.png" width="100" alt="">HuyJewelry</div>
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="Shop.html">Cửa hàng</a></li>
+
+      <li class="dropdown"><a href="#">
+        Sản phẩm
+        <ul class="dropdown-content">
+          <li><a href="Day-chuyen.html">Dây chuyền</a></li>
+          <li><a href="Nhan.html">Nhẫn</a></li>
+          <li><a href="Lac-tay_Vong-tay.html">Lắc tay / Vòng tay</a></li>
+          <li><a href="Lac-chan.html">Lắc chân</a></li>
+          <li><a href="Bong-tai.html">Bông tai</a></li>
+        </ul> </a>
+      </li>
+      <li><a href="Dich-vu.html">Dịch vụ</a></li>
+      <li class="dropdown"><a href="#">
+        Blog
+        <ul class="dropdown-content">
+          <li><a href="Tin-tuc.html">Tin tức</a></li>
+          <li><a href="Su-kien.html">Sự kiện</a></li>
+          <li><a href="Tu-van.html">Tư vấn</a></li>
+        </ul> </a>
+      </li>
+      <li><a href="Lien-he.html">Liên hệ</a></li>
+    </ul>
+
+    <div class="search-bar">
+      <label for="searchInput"><input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..."></label>
+      <button id="searchButton">Tìm kiếm</button>
+    </div>
+
+    <div class="icons">
+      <i class='fa fa-user' style='font-size:25px;color:black'></i>
+      <a href="wishlist.html">
+        <i class='fa fa-heart-o' style='font-size:25px;color:black'></i>
+      </a>
+      <div class="fa fa-shopping-cart" style='font-size:25px;color:black' onclick="goToCart()">
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="banner">
+  <img src="images/Jewelry-1.png" alt="Banner trang sức">
+</section>
+
+<h1>Giỏ Hàng</h1>
+<div class="cart">
+  <ul id="cart-items"></ul>
+  <p><strong>Tổng tiền:</strong> <span id="total-price">0</span> VNĐ</p>
+</div>
+
+<h2>Danh Sách Sản Phẩm</h2>
+<div class="products">
+  <div class="product">
+    <img src="images/dw-aspiration-white.png" alt="Dây chuyền"/>
+    <h3>Sản phẩm 1</h3>
+    <p>Giá: <span class="price">3150000</span> VNĐ</p>
+    <button class="add-to-cart">Thêm vào giỏ</button>
+  </div>
+  <div class="product">
+    <img src="images/dw-aspiration-black.png" alt="Dây chuyền"/>
+    <h3>Sản phẩm 2</h3>
+    <p>Giá: <span class="price">3150000</span> VNĐ</p>
+    <button class="add-to-cart">Thêm vào giỏ</button>
+  </div>
+</div>
+
+
+
+<footer>
+  <div class="footer-container">
+    <!-- Cột 1: Về Chúng Tôi -->
+    <div class="footer-column">
+      <div class="logo">
+        <img src="images/logo-navbar.png" alt="Huy Jewelry">
+      </div>
+      <p>HuyJewelry là thương hiệu chuyên cung cấp các loại trang sức phù hợp với nhu cầu, phong cách của từng khách hàng. Ngoài ra chúng tôi còn nhận thiết kế trang sức theo yêu cầu.</p>
+      <p><strong>Address:</strong> 100 Trần Hưng Đạo, quận 5, TPHCM</p>
+      <p><strong>Phone:</strong> 012345678910 (Hà Nội) - 012345678911 (Sài Gòn)</p>
+      <p><strong>Email:</strong> huyjewelry@gmail.com</p>
+      <div class="social-icons">
+
+        <a href="#" class="fa fa-facebook" style="color:white"></a>
+        <a href="#" class="fa fa-instagram" style="color:white"></a>
+        <a href="#" class="fa fa-youtube" style="color:white"></a>
+        <a href="#" class="fa fa-twitter" style="color:white"></a>
+
+      </div>
+    </div>
+
+    <!-- Cột 2: Thông tin khác -->
+    <div class="footer-column">
+      <h3>THÔNG TIN KHÁC</h3>
+      <ul>
+        <li><a href="#">Hướng dẫn mua hàng</a></li>
+        <li><a href="#">Chính sách đổi trả</a></li>
+        <li><a href="#">Chính sách giao hàng</a></li>
+        <li><a href="#">Thông tin tuyển dụng</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Từ khóa -->
+    <div class="footer-column">
+      <h3>TỪ KHOÁ</h3>
+      <div class="tags">
+        <span>Lắc tay/Vòng tay</span>
+        <span>Nhẫn</span>
+        <span>Lắc chân</span>
+        <span>Bông tai</span>
+        <span>Dây chuyền</span>
+      </div>
+    </div>
+
+    <!-- Cột 4: Bản tin khuyến mãi -->
+    <div class="footer-column">
+      <h3>BẢN TIN KHUYẾN MÃI</h3>
+      <input type="email" id="email" placeholder="Email">
+      <button id="subscribe-btn">📩 Đăng ký nhận thông tin ⭐</button>
+    </div>
+  </div>
+
+  <!-- Phương thức thanh toán -->
+  <div class="payment-icons">
+    <a href="#" class="fa fa-cc-visa" style="color:white"></a>
+    <a href="#" class="fa fa-cc-mastercard" style="color:white"></a>
+    <a href="#" class="fa fa-cc-paypal" style="color:white"></a>
+  </div>
+</footer>
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

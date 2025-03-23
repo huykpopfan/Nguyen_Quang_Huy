@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tin tức trang sức</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="top-bar">
+        <p>📞 0123456789 | ✉️ contact@email.com | 100 Trần Phú, Q.1, TP.HCM
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a></p>
+    </div>
+    <nav class="navbar">
+        <div class="logo"><img src="images/logo-navbar.png" width="100" alt="">HuyJewelry</div>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="Shop.html">Cửa hàng</a></li>
+
+            <li class="dropdown"><a href="#">
+                Sản phẩm
+                <ul class="dropdown-content">
+                    <li><a href="Day-chuyen.html">Dây chuyền</a></li>
+                    <li><a href="Nhan.html">Nhẫn</a></li>
+                    <li><a href="Lac-tay_Vong-tay.html">Lắc tay / Vòng tay</a></li>
+                    <li><a href="Lac-chan.html">Lắc chân</a></li>
+                    <li><a href="Bong-tai.html">Bông tai</a></li>
+                </ul> </a>
+            </li>
+            <li><a href="Dich-vu.html">Dịch vụ</a></li>
+            <li class="dropdown"><a href="#">
+                Blog
+                <ul class="dropdown-content">
+                    <li><a href="Tin-tuc.html">Tin tức</a></li>
+                    <li><a href="Su-kien.html">Sự kiện</a></li>
+                    <li><a href="Tu-van.html">Tư vấn</a></li>
+                </ul> </a>
+            </li>
+            <li><a href="Lien-he.html">Liên hệ</a></li>
+        </ul>
+
+        <div class="search-bar">
+            <label for="searchInput"><input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..."></label>
+            <button id="searchButton">Tìm kiếm</button>
+        </div>
+
+        <div class="icons">
+            <i class='fa fa-user' style='font-size:25px;color:black'></i>
+            <a href="wishlist.html">
+                <i class='fa fa-heart-o' style='font-size:25px;color:black'></i>
+            </a>
+            <div class="fa fa-shopping-cart" style='font-size:25px;color:black' onclick="goToCart()">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+    <h1>Thế Giới Trang Sức</h1>
+
+</header>
+
+<main>
+    <article>
+        <h2>Vẻ Đẹp Của Trang Sức Đá Quý</h2>
+        <p class="author">Viết bởi <b>Quang Huy</b> - Ngày 21/03/2025</p>
+        <img src="images/xu-huong-2025.jpg" alt="Trang sức đá quý" class="article-image">
+
+        <p>Trang sức không chỉ là phụ kiện mà còn thể hiện phong cách và đẳng cấp của người đeo. Đặc biệt, trang sức đá quý mang lại sự sang trọng và may mắn.</p>
+
+        <div id="more-content" class="hidden">
+            <h3>✨ 1. Lịch sử của Trang Sức Đá Quý</h3>
+            <p>Trang sức đã xuất hiện từ hàng nghìn năm trước, được các nền văn minh cổ đại như Ai Cập, Hy Lạp và Trung Quốc sử dụng để thể hiện quyền lực và địa vị.</p>
+
+            <h3>💎 2. Các Loại Đá Quý Phổ Biến</h3>
+            <ul>
+                <li><b>Kim cương:</b> Biểu tượng của sự vĩnh cửu và đẳng cấp.</li>
+                <li><b>Ruby:</b> Mang ý nghĩa của tình yêu và sức mạnh.</li>
+                <li><b>Sapphire:</b> Được xem là viên đá của trí tuệ và sự bình an.</li>
+                <li><b>Ngọc lục bảo:</b> Tượng trưng cho sự phát triển và may mắn.</li>
+            </ul>
+
+            <h3>📌 3. Cách Chọn Trang Sức Phù Hợp</h3>
+            <p>Chọn trang sức cần dựa vào sở thích, màu da và phong cách thời trang. Các chuyên gia khuyên rằng:</p>
+            <ul>
+                <li>Người da trắng hợp với vàng trắng, bạch kim.</li>
+                <li>Da ngăm nên chọn vàng 18K hoặc đá màu sắc nổi bật.</li>
+                <li>Chọn trang sức theo cung hoàng đạo để tăng may mắn.</li>
+            </ul>
+        </div>
+
+        <button id="read-more">Đọc thêm</button>
+
+        <div class="share-buttons">
+            <p>Chia sẻ bài viết:</p>
+            <button onclick="shareFacebook()">Facebook</button>
+            <button onclick="shareTwitter()">Twitter</button>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <!-- Cột 1: Về Chúng Tôi -->
+        <div class="footer-column">
+            <div class="logo">
+                <img src="images/logo-navbar.png" alt="Huy Jewelry">
+            </div>
+            <p>HuyJewelry là thương hiệu chuyên cung cấp các loại trang sức phù hợp với nhu cầu, phong cách của từng khách hàng. Ngoài ra chúng tôi còn nhận thiết kế trang sức theo yêu cầu.</p>
+            <p><strong>Address:</strong> 100 Trần Hưng Đạo, quận 5, TPHCM</p>
+            <p><strong>Phone:</strong> 012345678910 (Hà Nội) - 012345678911 (Sài Gòn)</p>
+            <p><strong>Email:</strong> huyjewelry@gmail.com</p>
+            <div class="social-icons">
+
+                <a href="#" class="fa fa-facebook" style="color:white"></a>
+                <a href="#" class="fa fa-instagram" style="color:white"></a>
+                <a href="#" class="fa fa-youtube" style="color:white"></a>
+                <a href="#" class="fa fa-twitter" style="color:white"></a>
+
+            </div>
+        </div>
+
+        <!-- Cột 2: Thông tin khác -->
+        <div class="footer-column">
+            <h3>THÔNG TIN KHÁC</h3>
+            <ul>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <li><a href="#">Thông tin tuyển dụng</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 3: Từ khóa -->
+        <div class="footer-column">
+            <h3>TỪ KHOÁ</h3>
+            <div class="tags">
+                <span>Lắc tay/Vòng tay</span>
+                <span>Nhẫn</span>
+                <span>Lắc chân</span>
+                <span>Bông tai</span>
+                <span>Dây chuyền</span>
+            </div>
+        </div>
+
+        <!-- Cột 4: Bản tin khuyến mãi -->
+        <div class="footer-column">
+            <h3>BẢN TIN KHUYẾN MÃI</h3>
+            <input type="email" id="email" placeholder="Email">
+            <button id="subscribe-btn">📩 Đăng ký nhận thông tin ⭐</button>
+        </div>
+    </div>
+
+    <!-- Phương thức thanh toán -->
+    <div class="payment-icons">
+        <a href="#" class="fa fa-cc-visa" style="color:white"></a>
+        <a href="#" class="fa fa-cc-mastercard" style="color:white"></a>
+        <a href="#" class="fa fa-cc-paypal" style="color:white"></a>
+    </div>
+</footer>
+
+<script src="js/scripts.js">
+    // Xử lý nút "Đọc thêm"
+    document.getElementById("read-more").addEventListener("click", function () {
+        var moreContent = document.getElementById("more-content");
+
+        if (moreContent.classList.contains("hidden")) {
+            moreContent.classList.remove("hidden");
+            this.textContent = "Thu gọn";
+        } else {
+            moreContent.classList.add("hidden");
+            this.textContent = "Đọc thêm";
+        }
+    });
+
+    // Chia sẻ lên Facebook
+    function shareFacebook() {
+        var url = window.location.href;
+        var facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+        window.open(facebookUrl, '_blank');
+    }
+
+    // Chia sẻ lên Twitter
+    function shareTwitter() {
+        var url = window.location.href;
+        var text = "Vẻ đẹp của trang sức đá quý - Khám phá ngay!";
+        var twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+        window.open(twitterUrl, '_blank');
+    }
+
+</script>
+
+</body>
+</html>

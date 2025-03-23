@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Liên hệ</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    input, textarea {
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 15px;
+        background: #ff00ff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background: #ff00ff;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #222;
+        color: white;
+        margin-top: 20px;
+    }
+
+
+</style>
+<body>
+<header>
+    <div class="top-bar">
+        <p>📞 0123456789 | ✉️ contact@email.com | 100 Trần Phú, Q.1, TP.HCM
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a></p>
+    </div>
+    <nav class="navbar">
+        <div class="logo"><img src="images/logo-navbar.png" width="100" alt="">HuyJewelry</div>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="Shop.html">Cửa hàng</a></li>
+
+            <li class="dropdown"><a href="#">
+                Sản phẩm
+                <ul class="dropdown-content">
+                    <li><a href="Day-chuyen.html">Dây chuyền</a></li>
+                    <li><a href="Nhan.html">Nhẫn</a></li>
+                    <li><a href="Lac-tay_Vong-tay.html">Lắc tay / Vòng tay</a></li>
+                    <li><a href="Lac-chan.html">Lắc chân</a></li>
+                    <li><a href="Bong-tai.html">Bông tai</a></li>
+                </ul> </a>
+            </li>
+            <li><a href="Dich-vu.html">Dịch vụ</a></li>
+            <li class="dropdown"><a href="#">
+                Blog
+                <ul class="dropdown-content">
+                    <li><a href="Tin-tuc.html">Tin tức</a></li>
+                    <li><a href="Su-kien.html">Sự kiện</a></li>
+                    <li><a href="Tu-van.html">Tư vấn</a></li>
+                </ul> </a>
+            </li>
+            <li><a href="Lien-he.html">Liên hệ</a></li>
+        </ul>
+
+        <div class="search-bar">
+            <label for="searchInput"><input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..."></label>
+            <button id="searchButton">Tìm kiếm</button>
+        </div>
+
+        <div class="icons">
+            <i class='fa fa-user' style='font-size:25px;color:black'></i>
+            <a href="wishlist.html">
+                <i class='fa fa-heart-o' style='font-size:25px;color:black'></i>
+            </a>
+            <!--i class='fa fa-shopping-cart' style='font-size:25px;color:black'>
+                <a href="Gio-hang.html"></a>
+            </i>-->
+            <div class="fa fa-shopping-cart" style='font-size:25px;color:black' onclick="goToCart()">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+    <h1>LIÊN HỆ</h1>
+</header>
+
+<main>
+    <section id="contact">
+        <h2>📩 Gửi Thông Tin Liên Hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi nào về trang sức, hãy liên hệ với chúng tôi!</p>
+
+        <form id="contact-form">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Nội dung:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Gửi Liên Hệ</button>
+        </form>
+
+        <p id="response-message" class="hidden">Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất.</p>
+    </section>
+
+    <section id="contact-info">
+        <h2>📍 Thông Tin Liên Hệ</h2>
+        <p><b>Địa chỉ:</b> 100 Trần Phú, Q5, TP.HCM</p>
+        <p><b>Email:</b> support@trangsuc.vn</p>
+        <p><b>Điện thoại:</b> 0123456789</p>
+    </section>
+</main>
+
+<script src="js/scripts.js">
+    // Xử lý nút "Xem thêm" trong tư vấn trang sức
+    document.getElementById("show-more-advice").addEventListener("click", function () {
+        var adviceContent = document.getElementById("more-advice");
+
+        if (adviceContent.classList.contains("hidden")) {
+            adviceContent.classList.remove("hidden");
+            this.textContent = "Thu gọn";
+        } else {
+            adviceContent.classList.add("hidden");
+            this.textContent = "Xem thêm";
+        }
+    });
+
+    // Xử lý form gửi tư vấn
+    document.getElementById("advice-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Ngăn form tải lại trang
+
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var preference = document.getElementById("preference").value;
+
+        if (name && email) {
+            document.getElementById("response-message").classList.remove("hidden");
+            document.getElementById("advice-form").reset();
+        }
+    });
+
+</script>
+<footer>
+    <div class="footer-container">
+        <!-- Cột 1: Về Chúng Tôi -->
+        <div class="footer-column">
+            <div class="logo">
+                <img src="images/logo-navbar.png" alt="Huy Jewelry">
+            </div>
+            <p>HuyJewelry là thương hiệu chuyên cung cấp các loại trang sức phù hợp với nhu cầu, phong cách của từng khách hàng. Ngoài ra chúng tôi còn nhận thiết kế trang sức theo yêu cầu.</p>
+            <p><strong>Address:</strong> 100 Trần Hưng Đạo, quận 5, TPHCM</p>
+            <p><strong>Phone:</strong> 012345678910 (Hà Nội) - 012345678911 (Sài Gòn)</p>
+            <p><strong>Email:</strong> huyjewelry@gmail.com</p>
+            <div class="social-icons">
+
+                <a href="#" class="fa fa-facebook" style="color:white"></a>
+                <a href="#" class="fa fa-instagram" style="color:white"></a>
+                <a href="#" class="fa fa-youtube" style="color:white"></a>
+                <a href="#" class="fa fa-twitter" style="color:white"></a>
+
+            </div>
+        </div>
+
+        <!-- Cột 2: Thông tin khác -->
+        <div class="footer-column">
+            <h3>THÔNG TIN KHÁC</h3>
+            <ul>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <li><a href="#">Thông tin tuyển dụng</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 3: Từ khóa -->
+        <div class="footer-column">
+            <h3>TỪ KHOÁ</h3>
+            <div class="tags">
+                <span>Lắc tay/Vòng tay</span>
+                <span>Nhẫn</span>
+                <span>Lắc chân</span>
+                <span>Bông tai</span>
+                <span>Dây chuyền</span>
+            </div>
+        </div>
+
+        <!-- Cột 4: Bản tin khuyến mãi -->
+        <div class="footer-column">
+            <h3>BẢN TIN KHUYẾN MÃI</h3>
+            <input type="email" id="email" placeholder="Email">
+            <button id="subscribe-btn">📩 Đăng ký nhận thông tin ⭐</button>
+        </div>
+    </div>
+
+    <!-- Phương thức thanh toán -->
+    <div class="payment-icons">
+        <a href="#" class="fa fa-cc-visa" style="color:white"></a>
+        <a href="#" class="fa fa-cc-mastercard" style="color:white"></a>
+        <a href="#" class="fa fa-cc-paypal" style="color:white"></a>
+    </div>
+</footer>
+</body>
+</html>
